@@ -1,6 +1,10 @@
 .row
   %h1
     Wszystkie ćwiczenia
+.row
+  = link_to 'Dodaj nowe ćwiczenie', new_exercise_path, class: 'btn btn-primary'
+  %br
+  %br
 %table.table.table-striped.table-bordered.table-hover
   %thead
     %tr
