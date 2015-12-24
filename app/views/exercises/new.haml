@@ -2,6 +2,7 @@
   %h1 Dodaj nowe ćwiczenie
 .row
   = form_tag exercises_path, class: 'form-horizontal' do
+    = render 'layouts/form_errors'
     .row.form-group
       %label.col-md-1{ for: :name }
         Nazwa:
