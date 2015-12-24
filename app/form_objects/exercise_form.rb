@@ -9,9 +9,4 @@ class ExerciseForm
   attribute :audio, String
 
   validates :name, presence: true
-
-  def save
-    return Exercise.create(attributes) if valid?
-    false
-  end
 end
