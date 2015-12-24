@@ -154,9 +154,6 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
-    pry-stack_explorer (0.4.9.2)
-      binding_of_caller (>= 0.7)
-      pry (>= 0.9.11)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -289,9 +286,7 @@ DEPENDENCIES
   httplog
   jbuilder (~> 2.0)
   jquery-rails
-  pry
   pry-rails
-  pry-stack_explorer
   quiet_assets
   rack-mini-profiler
   rails (= 4.2.4)
