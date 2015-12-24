@@ -1,1 +1,16 @@
-wszystkie ćwiczenia
+.row
+  %h1
+    Wszystkie ćwiczenia
+.row
+  .col-md-2
+    %strong
+      Nazwa:
+  .col-md-2
+    %strong
+      Opis:
+- exercises.each do |exercise|
+  .row
+    .col-md-2
+      = exercise.name
+    .col-md-2
+      = exercise.description
