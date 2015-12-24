@@ -9,7 +9,7 @@ class ExercisesController < ApplicationController
     render :new
   end
 
-  def index
+  def edit; end
 
   def index; end
 
