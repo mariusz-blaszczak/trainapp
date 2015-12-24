@@ -1,7 +1,7 @@
 class ExercisesController < ApplicationController
   expose(:form) { ExerciseForm.new(params) }
   expose(:exercises) { Exercise.all }
-
+  expose(:exercise) { Exercise.find(params['id']) }
   def new; end
 
   def create
