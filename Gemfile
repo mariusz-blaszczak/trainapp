@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 gem 'attr_extras'
 gem 'rails', '4.2.4'
 gem 'decent_exposure'
@@ -16,6 +15,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+gem "twitter-bootstrap-rails"
 
 group :development, :test do
   gem 'pry'
