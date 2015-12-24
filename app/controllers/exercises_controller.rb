@@ -5,7 +5,7 @@ class ExercisesController < ApplicationController
   def new; end
 
   def create
-    return redirect_to exercises_path if form.save
+    return redirect_to exercises_path if Exercise.create(exercise_params)
     render :new
   end
 
