@@ -1,16 +1,20 @@
 .row
   %h1
     Wszystkie ćwiczenia
-.row
-  .col-md-2
-    %strong
-      Nazwa:
-  .col-md-2
-    %strong
-      Opis:
-- exercises.each do |exercise|
-  .row
-    .col-md-2
-      = exercise.name
-    .col-md-2
-      = exercise.description
+%table.table.table-striped.table-bordered.table-hover
+  %thead
+    %tr
+      %th.col-md-2 Nazwa:
+      %th.col-md-8 Opis:
+      %th Akcje:
+  %tbody
+    - exercises.each do |exercise|
+      %tr
+        %td
+          = exercise.name
+        %td
+          = exercise.description
+        %td{ style: 'text-align: center' }
+          .btn-group
+            = link_to 'Edytuj', edit_exercise_path(exercise.id), class: 'btn-primary btn', role: 'button'
+            = link_to 'Usuń', exercise_path(exercise.id), method: 'DELETE', class: 'btn-danger btn', role: 'button'
