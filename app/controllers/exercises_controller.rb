@@ -10,5 +10,10 @@ class ExercisesController < ApplicationController
   end
 
   def index
+
+  def destroy
+    exercise.destroy
+    flash[:success] = 'Ćwiczenie zostało usunięte'
+    redirect_to exercises_path
   end
 end
