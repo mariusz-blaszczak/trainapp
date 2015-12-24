@@ -1,0 +1,6 @@
+.container
+  - flash.each do |type, message|
+    .alert.fade.in{ class: "alert-#{type}" }
+      %a.close{ href: '#', 'data-dismiss' => 'alert', 'aria-label' => 'close' }
+        &times;
+      = message
