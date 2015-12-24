@@ -1,7 +1,7 @@
 .row
   %h1 Edytuj ćwiczenie
 .row
-  = form_tag exercises_path, class: 'form-horizontal' do
+  = form_tag exercise_path, method: 'PATCH', class: 'form-horizontal' do
     = render 'layouts/form_errors'
     .row.form-group
       %label.col-md-1{ for: :name }
