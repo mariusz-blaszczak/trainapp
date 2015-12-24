@@ -11,7 +11,7 @@ class ExerciseForm
   validates :name, presence: true
 
   def save
-    return Exercice.create(attributes) if valid?
+    return Exercise.create(attributes) if valid?
     false
   end
 end
