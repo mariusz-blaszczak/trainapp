@@ -11,6 +11,8 @@ class ExercisesController < ApplicationController
 
   def index
 
+  def index; end
+
   def destroy
     exercise.destroy
     flash[:success] = 'Ćwiczenie zostało usunięte'
