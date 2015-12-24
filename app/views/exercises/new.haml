@@ -7,12 +7,12 @@
       %label.col-md-1{ for: :name }
         Nazwa:
       .col-md-5
-        = text_field_tag :name, @form.name, placeholder: 'Nazwa ćwiczenia', class: 'form-control'
+        = text_field_tag :name, form.name, placeholder: 'Nazwa ćwiczenia', class: 'form-control'
     .row.form-group
       %label.col-md-1{ for: :description }
         Opis:
       .col-md-5
-        = text_area_tag :description, @form.name, placeholder: 'Opis ćwiczenia', class: 'form-control'
+        = text_area_tag :description, form.name, placeholder: 'Opis ćwiczenia', class: 'form-control'
     .row
       .col-md-6
         %button.btn.btn-default.pull-right
