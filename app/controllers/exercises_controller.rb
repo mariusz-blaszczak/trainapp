@@ -1,5 +1,6 @@
 class ExercisesController < ApplicationController
   expose(:form) { ExerciseForm.new(params) }
+  expose(:edit_form) { EditExerciseForm.new(params, exercise) }
   expose(:exercises) { Exercise.all }
   expose(:exercise) { Exercise.find(params['id']) }
   def new; end
@@ -12,7 +13,7 @@ class ExercisesController < ApplicationController
   def edit; end
 
   def update
-    if exercise.update(exercise_params)
+    if edit_form.valid? && exercise.update(exercise_params)
       flash[:success] = 'Ćwiczenie zostało zaktualizowane'
       redirect_to exercises_path
     else
