@@ -3,16 +3,7 @@
 .row
   = form_tag exercises_path, class: 'form-horizontal' do
     = render 'layouts/form_errors'
-    .row.form-group
-      %label.col-md-1{ for: :name }
-        Nazwa:
-      .col-md-5
-        = text_field_tag :name, form.name, placeholder: 'Nazwa ćwiczenia', class: 'form-control'
-    .row.form-group
-      %label.col-md-1{ for: :description }
-        Opis:
-      .col-md-5
-        = text_area_tag :description, form.name, placeholder: 'Opis ćwiczenia', class: 'form-control'
+    = render 'exercise_form', form: form
     .row
       .col-md-6
         %button.btn.btn-default.pull-right
