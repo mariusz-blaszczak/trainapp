@@ -3,10 +3,14 @@ class ExercisesController < ApplicationController
   expose(:edit_form) { EditExerciseForm.new(params, exercise) }
   expose(:exercises) { Exercise.all }
   expose(:exercise) { Exercise.find(params['id']) }
+
   def new; end
 
   def create
-    return redirect_to exercises_path if Exercise.create(exercise_params)
+    if form.valid? && Exercise.create(exercise_params)
+      flash[:success] = 'Ćwiczenie zostało utworzone'
+      return redirect_to exercises_path
+    end
     render :new
   end
 
