@@ -17,7 +17,4 @@ class TrainingCreator
   def exercises
     Exercise.where('ID in (?)', form.exercises_ids)
   end
-
-  def save
-  end
 end
