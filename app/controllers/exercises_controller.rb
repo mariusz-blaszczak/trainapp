@@ -33,6 +33,12 @@ class ExercisesController < ApplicationController
     redirect_to exercises_path
   end
 
+  def record
+    path = File.join('public', params[:audio])
+    File.open(path, 'wb') { |f| f.write(params[:audio_file].read) }
+    render nothing: true
+  end
+
   private
 
   def exercise_params
