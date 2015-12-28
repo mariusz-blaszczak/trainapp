@@ -11,14 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151224140605) do
-
-  create_table "exercises", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "audio"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+ActiveRecord::Schema.define(version: 20_151_228_155_355) do
+  create_table 'exercises', force: :cascade do |t|
+    t.string 'name'
+    t.text 'description'
+    t.string 'audio'
+    t.datetime 'created_at',  null: false
+    t.datetime 'updated_at',  null: false
   end
 
+  create_table 'trainings', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
 end
