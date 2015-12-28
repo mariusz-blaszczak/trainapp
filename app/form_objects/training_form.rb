@@ -5,5 +5,8 @@ class TrainingForm
   include ActiveModel::Validations
 
   attribute :name, String
+  attribute :exercises_ids, Array[Integer]
+  attribute :exercises_duration, Array[Integer]
+
   validates :name, presence: true
 end
