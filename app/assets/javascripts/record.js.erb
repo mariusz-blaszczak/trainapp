@@ -22,7 +22,7 @@ function audioReceived(filename, filedata) {
   formData.append('audio_file', blob);
 
   var request = new XMLHttpRequest();
-  request.open("PATCH", "/exercises/store_record");
+  request.open('POST', '/records/save_file');
   request.send(formData);
 }
 
