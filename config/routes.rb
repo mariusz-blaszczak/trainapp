@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  patch 'exercises/store_record' => 'exercises#record'
+  post 'records/save_file' => 'records#create'
   resources :exercises do
     post :record, on: :collection
   end
