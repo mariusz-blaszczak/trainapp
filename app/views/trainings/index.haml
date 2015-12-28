@@ -1,0 +1,23 @@
+.row
+  %h1
+    Wszystkie treningi
+.row
+  = link_to 'Dodaj nowy', new_training_path, class: 'btn btn-primary'
+  %br
+  %br
+%table.table.table-striped.table-bordered.table-hover
+  %thead
+    %tr
+      %th.col-md-2 Nazwa:
+      %th Akcje:
+  %tbody
+    - trainings.each do |training|
+      %tr
+        %td
+          = training.name
+        %td
+          = training.description
+        %td{ style: 'text-align: center' }
+          .btn-group
+            = link_to 'Edytuj', edit_training_path(training.id), class: 'btn-primary btn', role: 'button'
+            = link_to 'Usuń', training_path(training.id), method: 'DELETE', class: 'btn-danger btn', role: 'button'
