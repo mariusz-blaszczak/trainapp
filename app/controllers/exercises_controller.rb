@@ -4,7 +4,9 @@ class ExercisesController < ApplicationController
   expose(:exercises) { Exercise.all }
   expose(:exercise) { Exercise.find(params['id']) }
 
-  def new; end
+  def new
+    @model = NewExercisePresenter.new
+  end
 
   def create
     if form.valid? && Exercise.create(exercise_params)
@@ -14,7 +16,9 @@ class ExercisesController < ApplicationController
     render :new
   end
 
-  def edit; end
+  def edit
+    @model = EditExercisePresenter.new(exercise)
+  end
 
   def update
     if edit_form.valid? && exercise.update(exercise_params)

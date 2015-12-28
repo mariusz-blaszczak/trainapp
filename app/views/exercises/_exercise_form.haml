@@ -18,4 +18,7 @@
         %a{href: "http://www.adobe.com/go/getflashplayer"}
           %img{alt: "Get Adobe Flash player", src: "http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"}/
     #audio_container
+    - if @model.audio_file_exists?
+      %audio{controls: ""}
+        %source{src: "#{form.audio}", type: "audio/ogg"}
 
