@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   post 'records/save_file' => 'records#create'
-  resources :exercises do
-    post :record, on: :collection
-  end
+  resources :exercises
+
   resources :trainings
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
