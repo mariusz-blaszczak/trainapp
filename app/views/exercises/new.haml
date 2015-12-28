@@ -1,7 +1,7 @@
 .row
   %h1 Dodaj nowe ćwiczenie
 .row
-  = form_tag exercises_path, class: 'form-horizontal' do
+  = form_tag exercises_path, class: 'form-horizontal', id: 'exercise_form' do
     = render 'layouts/form_errors'
     = render 'exercise_form', form: form
     .row
