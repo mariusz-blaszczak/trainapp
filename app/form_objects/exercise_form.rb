@@ -6,7 +6,11 @@ class ExerciseForm
 
   attribute :name, String
   attribute :description, String, default: ''
-  attribute :audio, String
+  attribute :audio, String, default: :generate_audio_file_name
 
   validates :name, presence: true
+
+  def generate_audio_file_name
+    "audio/#{SecureRandom.hex}.wav"
+  end
 end
