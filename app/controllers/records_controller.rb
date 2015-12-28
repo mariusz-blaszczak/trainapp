@@ -1,7 +1,12 @@
 class RecordsController < ApplicationController
   def create
-    path = Rails.public_path.join(params[:audio])
-    File.open(path, 'wb') { |f| f.write(params[:audio_file].read) }
+    File.open(file_path, 'wb') { |f| f.write(params[:audio_file].read) }
     render nothing: true
+  end
+
+  private
+
+  def file_path
+    Rails.public_path.join(params[:audio])
   end
 end
