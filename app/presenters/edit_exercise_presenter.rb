@@ -8,6 +8,6 @@ class EditExercisePresenter
   private
 
   def file_path
-    Rails.public_path.join(params[:audio])
+    Rails.public_path.join(exercise.audio)
   end
 end
