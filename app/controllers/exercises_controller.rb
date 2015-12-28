@@ -36,6 +36,6 @@ class ExercisesController < ApplicationController
   private
 
   def exercise_params
-    params.permit(:name, :description)
+    params.permit(:name, :description, :audio)
   end
 end
