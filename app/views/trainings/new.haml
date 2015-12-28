@@ -1,0 +1,6 @@
+.row
+  %h1 Dodaj nowy trening
+.row
+  = form_tag trainings_path, class: 'form-horizontal', id: 'exercise_form' do
+    = render 'layouts/form_errors'
+    = render 'form', form: form
