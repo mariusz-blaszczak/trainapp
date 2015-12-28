@@ -20,5 +20,5 @@
     #audio_container
     - if @model.audio_file_exists?
       %audio{controls: ""}
-        %source{src: "#{form.audio}", type: "audio/ogg"}
+        %source{src: "/#{form.audio}", type: "audio/ogg"}
 
