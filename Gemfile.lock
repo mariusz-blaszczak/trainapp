@@ -55,6 +55,11 @@ GEM
     bullet (4.14.10)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.9.0)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coderay (1.1.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
@@ -277,6 +282,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bullet
+  carrierwave
   coffee-rails (~> 4.1.0)
   decent_exposure
   draper
