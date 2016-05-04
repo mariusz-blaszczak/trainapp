@@ -1,7 +1,9 @@
 class TrainingsController < ApplicationController
   expose(:form) { TrainingForm.new(params) }
+  expose(:edit_form) { EditTrainingForm.new(params, training) }
   expose(:trainings) { Training.all }
   expose(:training) { Training.find(params['id']) }
+  expose(:exercises) { Exercise.all }
 
   def new
   end
@@ -14,6 +16,18 @@ class TrainingsController < ApplicationController
     render :new
   end
 
+  def edit
+  end
+
+  def update
+    if edit_form.valid? && Training.update(Training_params)
+      flash[:success] = 'Ćwiczenie zostało zaktualizowane'
+      redirect_to trainings_path
+    else
+      render :new
+    end
+  end
+
   def index
   end
 
@@ -23,4 +37,9 @@ class TrainingsController < ApplicationController
     redirect_to trainings_path
   end
 
+  private
+
+  def training_params
+    params.permit(:name, :exercises)
+  end
 end
