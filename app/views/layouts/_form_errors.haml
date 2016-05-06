@@ -1,7 +1,7 @@
 - if form.errors.full_messages.present?
   .row
     .col-sm-9
-      .alert.alert-danger{style: "margin-top: 10px"}
+      .alert.alert-danger{style: 'margin-top: 10px'}
         The following errors prevented the form from being saved:
         %ul
           - form.errors.full_messages.each do |msg|

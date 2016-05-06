@@ -16,6 +16,6 @@
     = file_field_tag :audio
     #audio_container
     - if @model.audio_file_exists?
-      %audio{controls: ""}
-        %source{src: "/#{form.audio}", type: "audio/ogg"}
+      %audio{controls: ''}
+        %source{src: "/#{form.audio}", type: 'audio/ogg'}
 
