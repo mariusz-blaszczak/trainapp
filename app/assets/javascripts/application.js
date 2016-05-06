@@ -13,5 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require local_audio_recorder/swfobject.js
 //= require_tree .
