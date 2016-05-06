@@ -31,3 +31,11 @@ public/audio/*
 .idea/vcs.xml
 
 .idea/workspace.xml
+
+.idea/runConfigurations/test__trainapp.xml
+
+.idea/runConfigurations/spec__trainapp.xml
+
+.idea/runConfigurations/Production__trainapp.xml
+
+.idea/runConfigurations/Development__trainapp.xml
