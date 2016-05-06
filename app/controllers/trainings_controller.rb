@@ -20,7 +20,7 @@ class TrainingsController < ApplicationController
   end
 
   def update
-    if edit_form.valid? && Training.update(Training_params)
+    if edit_form.valid? && Training.update(training_params)
       flash[:success] = 'Ćwiczenie zostało zaktualizowane'
       redirect_to trainings_path
     else
