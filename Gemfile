@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'virtus'
 gem 'twitter-bootstrap-rails'
 gem 'carrierwave'
+gem 'therubyracer'
 
 group :development do
   gem 'better_errors'
