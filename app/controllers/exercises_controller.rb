@@ -21,11 +21,11 @@ class ExercisesController < ApplicationController
   end
 
   def update
-    if edit_form.valid? && exercise.update(exercise_params)
+    if edit_form.valid? && exercise.update!(exercise_params)
       flash[:success] = 'Ćwiczenie zostało zaktualizowane'
       redirect_to exercises_path
     else
-      render :new
+      render :edit
     end
   end
 

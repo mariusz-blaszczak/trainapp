@@ -13,10 +13,7 @@
   %label.col-md-1{ for: :audio }
     Nagranie:
   .col-md-5
-    #recorder
-      %p
-        %a{href: "http://www.adobe.com/go/getflashplayer"}
-          %img{alt: "Get Adobe Flash player", src: "http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"}/
+    = file_field_tag :audio
     #audio_container
     - if @model.audio_file_exists?
       %audio{controls: ""}
