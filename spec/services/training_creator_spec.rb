@@ -10,15 +10,15 @@ describe TrainingCreator do
                    exercises_duration: exercises_duration)
   end
 
-  it 'creates traning' do
+  it 'creates tracing' do
     expect { subject.call }.to change { Training.all.count }.by(+1)
   end
 
-  it 'creates trainig_exercises' do
+  it 'creates training_exercises' do
     expect { subject.call }.to change { TrainingExercise.all.count }.by(+3)
   end
 
-  it 'creates trainig_exercises with valid duration' do
+  it 'creates training_exercises with valid duration' do
     subject.call
     expect(TrainingExercise.all.map(&:duration)).to eq([10, 20, 30])
   end
