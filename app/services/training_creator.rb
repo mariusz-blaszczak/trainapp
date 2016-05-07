@@ -1,7 +1,9 @@
 class TrainingCreator
   pattr_initialize :form
+  attr_reader :training
 
   def call
+    create_training
     create_training_exercises
   end
 
@@ -22,7 +24,7 @@ class TrainingCreator
     )
   end
 
-  def training
+  def create_training
     @training ||= Training.create(name: form.name)
   end
 
