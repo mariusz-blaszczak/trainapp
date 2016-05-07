@@ -23,7 +23,7 @@ describe TrainingCreator do
     expect(TrainingExercise.all.map(&:duration)).to eq([10, 20, 30])
   end
 
-  it 'creates trainig_exercises with valid exercises_ids' do
+  it 'creates training_exercises with valid exercises_ids' do
     subject.call
     expect(TrainingExercise.all.map(&:exercise_id)).to eq([1, 2, 3])
   end
