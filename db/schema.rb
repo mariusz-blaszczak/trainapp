@@ -11,28 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151228180429) do
+ActiveRecord::Schema.define(version: 20160506074114) do
 
-  create_table 'exercises', force: :cascade do |t|
-    t.string 'name'
-    t.text 'description'
-    t.string 'audio'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "exercises", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "audio"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table 'training_exercises', force: :cascade do |t|
-    t.integer 'exercise_id'
-    t.integer 'duration'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.integer 'training_id'
+  create_table "training_exercises", force: :cascade do |t|
+    t.integer  "exercise_id"
+    t.integer  "duration"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "training_id"
+    t.integer  "series_number"
   end
 
-  create_table 'trainings', force: :cascade do |t|
-    t.string 'name'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "trainings", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

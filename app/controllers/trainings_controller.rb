@@ -17,14 +17,15 @@ class TrainingsController < ApplicationController
   end
 
   def edit
+    render :edit, locals: { form: edit_form }
   end
 
   def update
-    if edit_form.valid? && Training.update(training_params)
-      flash[:success] = 'Ćwiczenie zostało zaktualizowane'
+    if edit_form.valid? && TrainingUpdater.new(form, training).call
+      flash[:success] = 'Trening zaktualizowany'
       redirect_to trainings_path
     else
-      render :new
+      render :edit
     end
   end
 
