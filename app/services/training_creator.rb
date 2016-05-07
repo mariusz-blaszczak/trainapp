@@ -17,6 +17,7 @@ class TrainingCreator
     TrainingExercise.create(
       exercise_id: exercise_id,
       duration: form.exercises_duration[index],
+      series_number: form.exercises_series_number[index],
       training_id: training.id,
     )
   end
