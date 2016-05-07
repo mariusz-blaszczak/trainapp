@@ -1,3 +1,4 @@
+# Convert EditTrainingForm values to match TrainingExercise attributes
 class EditTrainingFormToUpdateTrainingExercisesAttributesAdapter
   rattr_initialize :form
 
