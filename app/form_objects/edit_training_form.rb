@@ -1,5 +1,6 @@
 class EditTrainingForm < TrainingForm
   attr_reader :params, :training
+  attribute :training_exercises_ids, Array[Integer]
 
   def initialize(params, training)
     @params = params
