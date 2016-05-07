@@ -17,7 +17,7 @@ class TrainingsController < ApplicationController
   end
 
   def edit
-    render :new, locals: { form: edit_form }
+    render :edit, locals: { form: edit_form }
   end
 
   def update
