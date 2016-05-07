@@ -23,11 +23,6 @@ class EditTrainingFormToUpdateTrainingExercisesAttributesAdapter
       exercise_id: form.exercises_ids[index],
       duration: form.exercises_duration[index],
       series_number: form.exercises_series_number[index],
-      id: nil_if_blank(form.training_exercises_ids[index])
     }
-  end
-
-  def nil_if_blank(id)
-    id unless id.blank?
   end
 end

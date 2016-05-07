@@ -1,6 +1,5 @@
 class EditTrainingForm < TrainingForm
   attr_reader :params, :training
-  attribute :training_exercises_ids, Array[Integer]
 
   def initialize(params, training)
     @params = params
@@ -12,7 +11,17 @@ class EditTrainingForm < TrainingForm
 
   def build_params_from_training
     {
-      name: params[:name] || training.name
+      name: params[:name] || training.name,
+      exercises_series_number: params[:exercises_series_number] || exercises_series_numbers,
+      exercises_duration: params[:exercises_duration] || exercises_durations
     }
+  end
+
+  def exercises_durations
+    training.training_exercises.map { |e| e.duration }
+  end
+
+  def exercises_series_numbers
+    training.training_exercises.map { |e| e.series_number }
   end
 end

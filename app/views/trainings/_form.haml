@@ -18,7 +18,7 @@
         - exercises.each_with_index do |exercise, index|
           %tr
             %td{ style: 'text-align: center' }
-              = check_box_tag 'exercises_ids', exercise.id
+              = hidden_field_tag 'exercises_ids[]', exercise.id
             %td
               = exercise.name
             %td
@@ -28,12 +28,12 @@
                 .col-md-4
                   Czas:
                 .col-md-6
-                  = text_field_tag 'exercises_duration', form.exercises_duration[index], class: 'duration-input js-duration-input'
+                  = text_field_tag 'exercises_duration[]', form.exercises_duration[index], class: 'duration-input js-duration-input'
               .row
                 .col-md-4
                   Serie:
                 .col-md-6
-                  = text_field_tag 'exercises_series_number', form.exercises_series_number[index], class: 'series-number-input js-series-number-input'
+                  = text_field_tag 'exercises_series_number[]', form.exercises_series_number[index], class: 'series-number-input js-series-number-input'
 .row
   .col-md-12
     %button.btn.btn-default.pull-right.js-save-button
