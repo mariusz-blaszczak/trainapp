@@ -12,7 +12,7 @@ class EditExerciseForm < ExerciseForm
       audio: params[:audio] || exercise.audio || generate_audio_file_name,
       name: params[:name] || exercise.name,
       description: params[:description] || exercise.description,
-      double_sided: params[:double_sided] || exercise.double_sided
+      double_sided: params[:double_sided] || exercise.double_sided,
     }
   end
 end
