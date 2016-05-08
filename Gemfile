@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.2'
 gem 'attr_extras'
 gem 'rails', '4.2.4'
 gem 'decent_exposure'
