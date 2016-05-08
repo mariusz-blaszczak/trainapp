@@ -1,6 +1,6 @@
 class ExercisesController < ApplicationController
-  expose(:form) { ExerciseForm.new(params) }
-  expose(:edit_form) { EditExerciseForm.new(params, exercise) }
+  expose(:form) { ExerciseForm.new(exercise_params) }
+  expose(:edit_form) { EditExerciseForm.new(exercise_params, exercise) }
   expose(:exercises) { Exercise.all }
   expose(:exercise) { Exercise.find(params['id']) }
 
@@ -18,14 +18,15 @@ class ExercisesController < ApplicationController
 
   def edit
     @model = EditExercisePresenter.new(exercise)
+    render :edit, locals: { form: edit_form }
   end
 
   def update
-    if edit_form.valid? && exercise.update!(exercise_params)
+    if edit_form.valid? && ExerciseUpdater.new(exercise.id, edit_form).call
       flash[:success] = 'Ćwiczenie zostało zaktualizowane'
       redirect_to exercises_path
     else
-      render :edit
+      render :edit, locals: { form: edit_form }
     end
   end
 
@@ -40,6 +41,6 @@ class ExercisesController < ApplicationController
   private
 
   def exercise_params
-    params.permit(:name, :description, :audio)
+    params.permit(:name, :description, :audio, :double_sided)
   end
 end

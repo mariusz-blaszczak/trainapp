@@ -18,4 +18,10 @@
     - if @model.audio_file_exists?
       %audio{controls: ''}
         %source{src: "#{form.audio.url}", type: 'audio/ogg'}
+.row.form-group
+  %label.col-md-1{ for: :double_sided }
+    Ćwiczenie dwustronne
+  .col-md-5
+    = hidden_field_tag :double_sided, false, class: 'js-double-sided-hidden-input'
+    = check_box_tag :double_sided, true, form.double_sided, class: 'js-double-sided-checkbox-input'
 

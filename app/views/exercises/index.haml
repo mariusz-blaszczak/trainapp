@@ -2,7 +2,7 @@
   %h1
     Wszystkie ćwiczenia
 .row
-  = link_to 'Dodaj nowe ćwiczenie', new_exercise_path, class: 'btn btn-primary'
+  = link_to 'Dodaj nowe ćwiczenie', new_exercise_path, class: 'btn btn-primary js-add-new-button'
   %br
   %br
 %table.table.table-striped.table-bordered.table-hover
@@ -20,5 +20,5 @@
           = exercise.description
         %td{ style: 'text-align: center' }
           .btn-group
-            = link_to 'Edytuj', edit_exercise_path(exercise.id), class: 'btn-primary btn', role: 'button'
+            = link_to 'Edytuj', edit_exercise_path(exercise.id), class: 'btn-primary btn js-edit-button', role: 'button'
             = link_to 'Usuń', exercise_path(exercise.id), method: 'DELETE', class: 'btn-danger btn', role: 'button'
