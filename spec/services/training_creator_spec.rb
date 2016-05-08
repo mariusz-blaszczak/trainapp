@@ -7,10 +7,10 @@ describe TrainingCreator do
   let(:exercises_series_number) { [3, 4, 5] }
   let(:form) do
     double('form', name: 'some training',
-           exercises_ids: exercises_ids,
-           exercises_duration: exercises_duration,
-           exercises_series_number: exercises_series_number,
-    )
+                   exercises_ids: exercises_ids,
+                   exercises_duration: exercises_duration,
+                   exercises_series_number: exercises_series_number
+          )
   end
 
   it 'creates tracing' do

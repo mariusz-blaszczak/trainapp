@@ -16,8 +16,8 @@ class TrainingUpdater
 
   def wipe_training_exercises
     attributes_array = EditTrainingFormToUpdateTrainingExercisesAttributesAdapter
-                        .new(form)
-                        .call
+                       .new(form)
+                       .call
     remove_all_training_exercises
     create_new_training_exercises(attributes_array)
   end
