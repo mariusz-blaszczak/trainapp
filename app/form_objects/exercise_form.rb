@@ -7,6 +7,7 @@ class ExerciseForm
   attribute :name, String
   attribute :description, String, default: ''
   attribute :audio, String, default: :generate_audio_file_name
+  attribute :double_sided, Boolean, default: false
 
   validates :name, presence: true
 
