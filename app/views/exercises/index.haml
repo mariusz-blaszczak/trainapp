@@ -11,6 +11,7 @@
       %th Index:
       %th.col-md-2 Nazwa:
       %th.col-md-8 Opis:
+      %th Dwustronne
       %th Akcje:
   %tbody
     - exercises.to_enum.with_index(1).each do |exercise, index|
@@ -21,6 +22,8 @@
           = exercise.name
         %td
           = exercise.description
+        %td
+          = exercise.decorate.double_sided_human
         %td{ style: 'text-align: center' }
           .btn-group
             = link_to 'Edytuj', edit_exercise_path(exercise.id), class: 'btn-primary btn js-edit-button', role: 'button'

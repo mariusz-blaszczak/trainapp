@@ -34,6 +34,10 @@
                   Serie:
                 .col-md-6
                   = text_field_tag 'exercises_series_number[]', form.exercises_series_number[index], class: 'series-number-input js-series-number-input'
+              .row
+                .col-md-6
+                  = exercise.decorate.double_sided_human
+
 .row
   .col-md-12
     %button.btn.btn-default.pull-right.js-save-button
