@@ -10,9 +10,9 @@ describe EditTrainingFormToUpdateTrainingExercisesAttributesAdapter do
   end
   let(:expected_attributes) do
     [
-      { exercise_id: 1, duration: 3, series_number: 6, id: 9 },
-      { exercise_id: 2, duration: 4, series_number: 7, id: nil },
-      { exercise_id: 3, duration: 5, series_number: 8, id: nil }
+      { exercise_id: 1, duration: 3, series_number: 6 },
+      { exercise_id: 2, duration: 4, series_number: 7 },
+      { exercise_id: 3, duration: 5, series_number: 8 }
     ]
   end
 
