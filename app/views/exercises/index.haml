@@ -8,12 +8,15 @@
 %table.table.table-striped.table-bordered.table-hover
   %thead
     %tr
+      %th Index:
       %th.col-md-2 Nazwa:
       %th.col-md-8 Opis:
       %th Akcje:
   %tbody
-    - exercises.each do |exercise|
+    - exercises.to_enum.with_index(1).each do |exercise, index|
       %tr
+        %td.js-exercise-index
+          = index
         %td
           = exercise.name
         %td
