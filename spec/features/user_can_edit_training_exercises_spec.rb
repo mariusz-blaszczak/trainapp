@@ -11,7 +11,8 @@ feature 'User can edit training exercises', type: :feature do
     find('table.js-training-exercises-table tbody tr input.js-series-number-input').set(10)
     find('.js-save-button').click
     visit 'trainings/1/edit'
-    expect(find('table.js-training-exercises-table tbody tr input.js-series-number-input').value).to eq('10')
+    expect(find('table.js-training-exercises-table tbody tr input.js-series-number-input').value)
+      .to eq('10')
   end
 
   scenario 'user can change duration' do
@@ -19,6 +20,7 @@ feature 'User can edit training exercises', type: :feature do
     find('table.js-training-exercises-table tbody tr input.js-duration-input').set(10)
     find('.js-save-button').click
     visit 'trainings/1/edit'
-    expect(find('table.js-training-exercises-table tbody tr input.js-duration-input').value).to eq('10')
+    expect(find('table.js-training-exercises-table tbody tr input.js-duration-input').value)
+      .to eq('10')
   end
 end
